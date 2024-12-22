@@ -1,0 +1,156 @@
+/* Reseteo todo*/ 
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+/*pongo la barra de navegador en el centro y le pongo color celeste clarito*/
+nav{
+    text-align: center;
+    background-color: lightblue;
+    color: black;
+    padding: 10px;
+}
+/*especifico la lista del nav para que quede centrado y la fuente*/
+nav ul{
+    list-style: none;
+    display: inline-flex;
+    justify-content: center;
+    padding: 0;
+    margin:0;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24 px;
+}
+/*especifico espacio entre los elementos del menu*/
+nav ul li{
+    margin: 0 20px;
+}
+/*acomodo los enlaces*/
+a{
+    text-decoration: none;
+    color: inherit;
+}
+/*sección hero*/
+.Hero {
+    background-image: url('../img/sabrina_header.avif'); /*importé la imagen*/
+    background-repeat: no-repeat; /*que no se repita*/
+    background-position: center;
+    background-size: cover;
+    height: 100vh; /* la sección ocupa toda la altura de la ventana */
+    display: flex; /*flexbox*/
+    align-items: center; /* alineo contenido en el centro vertical */
+    justify-content: flex-start; /* alineo el contenido horizontalmente */
+    color: white; /* color texto */
+    padding-left: 100px; /*espacio a la izquierda*/
+    font-size: 40px; /*tamaño letra*/
+    font-family: 'Times New Roman', Times, serif;
+    background-attachment: fixed;
+}
+/*tamaño de portadas*/ 
+.contenedor-canciones img{
+    width: 300px;
+    height: 300px;
+}
+/*cambio la fuente de todo el cuerpo*/
+body{
+    font-family: "Poppins", serif;
+}
+body p{
+    margin: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+/*cambio el footer*/
+
+footer {
+    background-color: lightblue; /*color*/
+    bottom: 0;
+    width: 100%; /*ocupa todo el ancho*/
+    padding: 10px 0;  /* Espacio en la parte superior e inferior */
+    display: flex;
+    justify-content: center;  /* centra los iconos */
+    gap: 30px;  /* Espacio entre los iconos */
+}
+
+footer img {
+    width: 20px;  /* tamaño de los iconos */
+    height: 20px;  /* iconos cuadrados */
+}
+/*modifico las tablas*/
+
+table {
+    border-collapse: collapse; /* uno los bordes */
+    width: 100%; /* ocupa todo el espacio*/
+    text-align: left; /* alineado */
+    border: 2px solid lightblue; /* borde */
+}
+
+table th, table td {
+    padding: 10px; /* espaciado adentro */
+    border: 2px solid rgb(93, 135, 149); /* bordes entre celdas */
+}
+/*encabezados*/
+table th {
+    background-color: lightblue; /* fondo de los encabezados */
+    color: black; /*  texto */
+}
+.ultimo-lanzamiento {
+    background-image: url(../img/portada-musica.jpg); /*pongo la foto*/
+    background-attachment: fixed; /*fijo*/
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    align-items: center; /* centro verticalmente */
+    color: white; /* texto */
+    padding-top: 200px; 
+    padding-left: 200px;
+    font-size: 40px; /* tamaño de la letra */
+    font-family: 'Times New Roman', Times, serif;
+}
+.ultimo-lanzamiento h2{
+    font-size: 35;
+    padding-left: 125px;
+    color: white;
+    text-align: justify;
+}
+h2{
+    color: rgb(88, 155, 178);
+    text-align: center;
+    font-size: 32px;
+}
+h3{
+    color: white;
+    padding-left: 2%;
+    background-color: lightblue;
+    padding-left: 100px;
+}
+.moda img{
+    max-width: 30%; /* la imagen ocupa el 80% del ancho del contenedor */
+    height: 500px;
+    margin: 10px;
+    padding-left: 60px;
+}
+.contenedor-canciones{
+    display: flex; /*flexbox*/
+    flex-wrap: wrap; /*los elementos van abajo si no entran*/
+    gap:20px; /*espacio entre elementos*/
+    align-items: center; /*centro*/
+    justify-content: center; /*justificado*/
+}
+.contenedor-canciones h4{
+    text-align: center;
+}
+.biografia{
+        background-image: url(../img/sabrina-portada.avif);
+        background-repeat: no-repeat;
+        background-position: top-left;
+        background-size: 300px;
+        margin: 20px;
+        padding-left: 190px; /* espacio para que el contenido no este sobre la imagen */}
+
+/*alineo para que el texto no quede sobre la iamgen*/
+.biografia p{
+    padding-left: 130px;
+    text-align: left;
+    padding-top: 0;
+}
