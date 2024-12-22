@@ -1,5 +1,5 @@
-/* Reseteo todo */
-*{
+/* Reseteo todo */ 
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,24 +12,19 @@ nav {
     color: black;
     padding: 10px;
 }
-
-/* Lista de navegación */
 nav ul {
     list-style: none;
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     padding: 0;
     margin: 0;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 24px;
+    flex-wrap: wrap;
 }
-
-/* Espacio entre los elementos del menú */
 nav ul li {
     margin: 0 20px;
 }
-
-/* Acomodo los enlaces */
 a {
     text-decoration: none;
     color: inherit;
@@ -52,24 +47,24 @@ a {
     background-attachment: fixed;
 }
 
-/* Tamaño de portadas */
+/* Tamaño de portadas */ 
 .contenedor-canciones img {
     width: 300px;
     height: 300px;
+    object-fit: cover;
 }
 
-/* Fuente del cuerpo */
+/* Cambio la fuente de todo el cuerpo */
 body {
     font-family: "Poppins", serif;
 }
-
 body p {
     margin: 20px;
     padding-left: 100px;
     padding-right: 100px;
 }
 
-/* Footer */
+/* Cambio el footer */
 footer {
     background-color: lightblue;
     bottom: 0;
@@ -79,32 +74,28 @@ footer {
     justify-content: center;
     gap: 30px;
 }
-
 footer img {
     width: 20px;
     height: 20px;
 }
 
-/* Tablas */
+/* Modifico las tablas */
 table {
     border-collapse: collapse;
     width: 100%;
     text-align: left;
     border: 2px solid lightblue;
 }
-
 table th, table td {
     padding: 10px;
     border: 2px solid rgb(93, 135, 149);
 }
-
-/* Encabezados de la tabla */
 table th {
     background-color: lightblue;
     color: black;
 }
 
-/* Sección de último lanzamiento */
+/* Último lanzamiento */
 .ultimo-lanzamiento {
     background-image: url(../img/portada-musica.jpg);
     background-attachment: fixed;
@@ -118,28 +109,24 @@ table th {
     font-size: 40px;
     font-family: 'Times New Roman', Times, serif;
 }
-
 .ultimo-lanzamiento h2 {
     font-size: 35px;
     padding-left: 125px;
     color: white;
     text-align: justify;
 }
-
 h2 {
     color: rgb(88, 155, 178);
     text-align: center;
     font-size: 32px;
 }
-
 h3 {
     color: white;
-    padding-left: 2%;
     background-color: lightblue;
-    padding-left: 100px;
+    padding: 10px 100px;
 }
 
-/* Estilo para imágenes de moda */
+/* Estilo para moda */
 .moda img {
     max-width: 30%;
     height: 500px;
@@ -147,7 +134,7 @@ h3 {
     padding-left: 60px;
 }
 
-/* Contenedor de canciones */
+/* Contenedor canciones */
 .contenedor-canciones {
     display: flex;
     flex-wrap: wrap;
@@ -155,12 +142,11 @@ h3 {
     align-items: center;
     justify-content: center;
 }
-
 .contenedor-canciones h4 {
     text-align: center;
 }
 
-/* Sección Biografía */
+/* Biografía */
 .biografia {
     background-image: url(../img/sabrina-portada.avif);
     background-repeat: no-repeat;
@@ -169,99 +155,67 @@ h3 {
     margin: 20px;
     padding-left: 190px;
 }
-
 .biografia p {
     padding-left: 130px;
     text-align: left;
     padding-top: 0;
 }
 
-/* Media Queries para pantallas pequeñas */
-
-@media (max-width: 1200px) {
-    .Hero {
-        font-size: 30px;
-        padding-left: 50px;
-    }
-
-    .contenedor-canciones img {
-        width: 250px;
-        height: 250px;
-    }
-
-    body p {
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-
-    footer {
-        padding: 15px 0;
-    }
-
-    footer img {
-        width: 25px;
-        height: 25px;
-    }
-}
-
-@media (max-width: 800px) {
-    nav ul {
-        font-size: 20px;
-    }
-
-    .Hero {
-        font-size: 25px;
-        padding-left: 20px;
-    }
-
-    .contenedor-canciones img {
-        width: 200px;
-        height: 200px;
-    }
-
-    body p {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-
-    .moda img {
-        max-width: 50%;
-    }
-
-    footer img {
-        width: 30px;
-        height: 30px;
-    }
-}
-
+/* Media Queries Responsivos */
 @media (max-width: 500px) {
     nav ul {
         flex-direction: column;
-        font-size: 18px;
+        align-items: center;
     }
-
+    nav ul li {
+        margin: 10px 0;
+    }
     .Hero {
         font-size: 20px;
         padding-left: 10px;
     }
-
-    .contenedor-canciones img {
-        width: 150px;
-        height: 150px;
-    }
-
-    body p {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
     footer {
         flex-direction: column;
-        gap: 20px;
+        gap: 10px;
     }
-
     footer img {
-        width: 40px;
-        height: 40px;
+        margin: 5px 0;
+    }
+    .contenedor-canciones img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (min-width: 600px) {
+    body {
+        font-size: 18px;
+        padding: 20px;
+    }
+    .Hero {
+        padding-left: 50px;
+    }
+    .contenedor-canciones {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .contenedor-canciones img {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        font-size: 20px;
+        padding: 30px;
+    }
+    nav ul {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .contenedor-canciones img {
+        width: 300px;
+        height: 300px;
     }
 }
