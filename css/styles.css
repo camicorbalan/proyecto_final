@@ -125,15 +125,79 @@ h3 {
     background-color: lightblue;
     padding: 10px 100px;
 }
-
-/* Estilo para moda */
-.moda img {
-    max-width: 30%;
-    height: 500px;
-    margin: 10px;
-    padding-left: 60px;
+/* Grilla de 3 imágenes por fila */
+.moda section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 20px; /* Espaciado entre las imágenes */
+    justify-items: center; /* Centra las imágenes dentro de cada columna */
+    margin-bottom: 40px; /* Espaciado debajo de cada sección */
 }
 
+/* Estilo para las imágenes dentro de la sección de moda */
+.moda section img {
+    width: 100%; /* Las imágenes ocupan el 100% del ancho de su celda */
+    height: auto;
+    object-fit: cover;
+}
+
+/* Grilla de 3 imágenes por fila */
+.moda section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 20px; /* Espaciado entre las imágenes */
+    justify-items: center; /* Centra las imágenes dentro de cada columna */
+    margin-bottom: 40px; /* Espaciado debajo de cada sección */
+}
+
+/* Estilo para las imágenes dentro de la sección de moda */
+.moda section img {
+    width: 100%; /* Las imágenes ocupan el 100% del ancho de su celda */
+    height: 300px; /* Fijamos una altura uniforme para todas las imágenes */
+    object-fit: cover; /* Esto asegura que la imagen se recorte si es necesario para llenar el espacio */
+}
+/* Grilla de 3 imágenes por fila */
+.moda section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 20px; 
+    justify-items: center; /* centra las imágenes dentro de cada columna */
+    margin-bottom: 40px;
+}
+
+/* estilo para las imágenes*/
+.moda section img {
+    width: 100%; /* Las imágenes ocupan el 100% del ancho de su celda */
+    height: 600px; 
+    object-fit: cover; 
+}
+
+/* Estilo para el texto de las secciones */
+.moda section p {
+    width: 100%; /* Asegura que el texto ocupe todo el ancho disponible */
+    text-align: justify; /* Justifica el texto */
+    font-size: 18px;
+    margin: 0 0 20px 0; /* Espaciado en la parte inferior */
+}
+
+/* Asegura que el texto ocupa todo el ancho de la pantalla */
+.moda section h3, .moda section p {
+    grid-column: span 3; /* Hace que los títulos y párrafos ocupen todo el ancho */
+}
+
+/* Para que las imágenes se alineen correctamente y no se distorsionen */
+.moda img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+/* Texto debe ocupar toda la fila */
+.moda section > h3, .moda section > p {
+    text-align: center;
+    width: 100%; /* Ocupa todo el ancho */
+    grid-column: span 3; /* Hace que el texto ocupe toda la fila */
+}
 /* Contenedor canciones */
 .contenedor-canciones {
     display: flex;
