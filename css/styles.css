@@ -412,7 +412,7 @@ h3 {
     /* imagenes contenedor canciones */
     .contenedor-canciones img {
         width: 100%;
-        width: 350px; /* Limitar el ancho máximo de las imágenes */
+        width: 350px; /*defino el ancho*/
         height: auto;
         margin-bottom: 20px;
     }
@@ -437,6 +437,6 @@ h3 {
 .moda section h3, .moda section p {
     text-align: center;
     width: 100%;
-    grid-column: span 2; /* Asegurar que el texto ocupe todo el ancho */
+    grid-column: span 2; /* el texto ocupa todo ancho */
 }
 }
