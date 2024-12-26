@@ -1,12 +1,24 @@
-/* Reseteo todo */ 
+/* reseteo en 0 */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 } 
-
-/* Barra de navegación */
-nav {
+/* barra de navegación  */
+.seccion-tablas a{ /*especifico por los cambios de bootstrap*/
+    text-decoration: none;
+    color: black;
+} 
+.seccion-tablas h2{ /*especifico por los cambios de bootstrap*/
+    color: rgb(88, 155, 178);
+    text-align: center;
+    font-size: 32px;
+    font-family: "Poppins", serif;
+}
+.seccion-tablas p{ /*especifico por los cambios de bootstrap*/
+    font-family: "Poppins", serif;
+}
+nav { /*nav*/
     text-align: center;
     background-color: lightblue;
     color: black;
@@ -28,9 +40,10 @@ nav ul li {
 a {
     text-decoration: none;
     color: inherit;
+    line-height: 1.5
 }
 
-/* Sección Hero */
+/* sección Hero */
 .Hero {
     background-image: url('../img/sabrina_header.avif');
     background-repeat: no-repeat;
@@ -39,32 +52,27 @@ a {
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     color: white;
     padding-left: 100px;
     font-size: 40px;
     font-family: 'Times New Roman', Times, serif;
     background-attachment: fixed;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(24, 86, 181, 0.7); /*sombra para que no se pierda la letra*/
 }
 
-/* Tamaño de portadas */ 
-.contenedor-canciones img {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-}
-
-/* Cambio la fuente de todo el cuerpo */
+/* el cuerpo */
 body {
-    font-family: "Poppins", serif;
+    font-family: "Poppins", serif; /*fuente*/
 }
-body p {
+body p { /*margenes y padding*/
     margin: 20px;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding: 0 100px;
 }
 
-/* Cambio el footer */
+
+/* footer */
 footer {
     background-color: lightblue;
     bottom: 0;
@@ -78,24 +86,26 @@ footer img {
     width: 20px;
     height: 20px;
 }
-
-/* Modifico las tablas */
-table {
-    border-collapse: collapse;
-    width: 100%;
-    text-align: left;
-    border: 2px solid lightblue;
-}
-table th, table td {
-    padding: 10px;
-    border: 2px solid rgb(93, 135, 149);
-}
-table th {
-    background-color: lightblue;
-    color: black;
+/* contenedor de las canciones */
+.contenedor-canciones {
+    display: flex; /* flexbox */
+    justify-content: space-between; /* espaciado parejo */
+    gap: 20px;
+    flex-wrap: wrap; 
+    margin: 20px 0;
 }
 
-/* Último lanzamiento */
+.contenedor-canciones div {
+    text-align: center; /* centro */
+}
+
+.contenedor-canciones img {
+    width: 100%; /* ocupan el 100% */
+    height: auto; /* proporción de la imagen */
+    max-width: 300px; /* limita el tamaño máximo */
+}
+
+/* último lanzamiento */
 .ultimo-lanzamiento {
     background-image: url(../img/portada-musica.jpg);
     background-attachment: fixed;
@@ -104,8 +114,7 @@ table th {
     height: 100vh;
     align-items: center;
     color: white;
-    padding-top: 200px;
-    padding-left: 200px;
+    padding: 200px 0 0 200px;
     font-size: 40px;
     font-family: 'Times New Roman', Times, serif;
 }
@@ -115,6 +124,11 @@ table th {
     color: white;
     text-align: justify;
 }
+.ultimo-lanzamiento a{
+    text-decoration: none;
+}
+
+/* Títulos */
 h2 {
     color: rgb(88, 155, 178);
     text-align: center;
@@ -125,161 +139,304 @@ h3 {
     background-color: lightblue;
     padding: 10px 100px;
 }
-/* Grilla de 3 imágenes por fila */
-.moda section {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-    gap: 20px; /* Espaciado entre las imágenes */
-    justify-items: center; /* Centra las imágenes dentro de cada columna */
-    margin-bottom: 40px; /* Espaciado debajo de cada sección */
-}
 
-/* Estilo para las imágenes dentro de la sección de moda */
-.moda section img {
-    width: 100%; /* Las imágenes ocupan el 100% del ancho de su celda */
-    height: auto;
-    object-fit: cover;
-}
-
-/* Grilla de 3 imágenes por fila */
+/* Moda */
 .moda section {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-    gap: 20px; /* Espaciado entre las imágenes */
-    justify-items: center; /* Centra las imágenes dentro de cada columna */
-    margin-bottom: 40px; /* Espaciado debajo de cada sección */
-}
-
-/* Estilo para las imágenes dentro de la sección de moda */
-.moda section img {
-    width: 100%; /* Las imágenes ocupan el 100% del ancho de su celda */
-    height: 300px; /* Fijamos una altura uniforme para todas las imágenes */
-    object-fit: cover; /* Esto asegura que la imagen se recorte si es necesario para llenar el espacio */
-}
-/* Grilla de 3 imágenes por fila */
-.moda section {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-    gap: 20px; 
-    justify-items: center; /* centra las imágenes dentro de cada columna */
+    display: grid;/*grid*/
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
     margin-bottom: 40px;
 }
-
-/* estilo para las imágenes*/
 .moda section img {
-    width: 100%; /* Las imágenes ocupan el 100% del ancho de su celda */
-    height: 600px; 
-    object-fit: cover; 
-}
-
-/* Estilo para el texto de las secciones */
-.moda section p {
-    width: 100%; /* Asegura que el texto ocupe todo el ancho disponible */
-    text-align: justify; /* Justifica el texto */
-    font-size: 18px;
-    margin: 0 0 20px 0; /* Espaciado en la parte inferior */
-}
-
-/* Asegura que el texto ocupa todo el ancho de la pantalla */
-.moda section h3, .moda section p {
-    grid-column: span 3; /* Hace que los títulos y párrafos ocupen todo el ancho */
-}
-
-/* Para que las imágenes se alineen correctamente y no se distorsionen */
-.moda img {
-    width: 100%;
+    width: 100%; /*tamaño de imagenes*/
     height: 600px;
     object-fit: cover;
 }
-
-/* Texto debe ocupar toda la fila */
-.moda section > h3, .moda section > p {
+.moda section h3, .moda section p { /*texto de moda*/
     text-align: center;
-    width: 100%; /* Ocupa todo el ancho */
-    grid-column: span 3; /* Hace que el texto ocupe toda la fila */
+    width: 100%;
+    grid-column: span 3;
 }
-/* Contenedor canciones */
-.contenedor-canciones {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-}
-.contenedor-canciones h4 {
-    text-align: center;
-}
-
-/* Biografía */
 .biografia {
-    background-image: url(../img/sabrina-portada.avif);
-    background-repeat: no-repeat;
-    background-position: top-left;
-    background-size: 300px;
+    display: grid; /* grid */
+    grid-template-columns: 300px 1fr; /*una columna de 300px para la imagen y la otra ocupa lo restante */
     margin: 20px;
-    padding-left: 190px;
+}
+.biografia img {
+    width: 100%; /* imagen ocupe todo el espacio de su columna */
+    height: auto; /* mantiene las proporciones*/
+    object-fit: cover;
+    grid-column: 1; /* La imagen está en la primera columna */
 }
 .biografia p {
-    padding-left: 130px;
-    text-align: left;
-    padding-top: 0;
+    grid-column: 2; /* el texto va a la segunda columna */
+    padding-left: 20px;
+    text-align: left; /* texto a la izquierda */
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
 }
-
-/* Media Queries Responsivos */
-@media (max-width: 500px) {
+/* responsive 480 */
+@media screen and (max-width: 480px) {/*nav*/
+    nav {
+        text-align: center;
+        padding: 10px;
+    }
+    /* lista del nav */
     nav ul {
-        flex-direction: column;
-        align-items: center;
+        display: flex;
+        flex-direction: column; /* a columna para apilar */
+        align-items: center; /* centrado*/
+        padding: 0;
+        margin: 0;
+        font-size: 20px; /* más chiquito */
     }
+    /* elementos de la lista */
     nav ul li {
-        margin: 10px 0;
+        margin: 5px 0; /* menos margen */
     }
-    .Hero {
-        font-size: 20px;
-        padding-left: 10px;
-    }
+    /*footer*/
     footer {
-        flex-direction: column;
-        gap: 10px;
+        font-size: 10px; /* texto más chico */
+        padding: 6px; /* menos padding */
     }
+
     footer img {
-        margin: 5px 0;
+        width: 16px; /* íconos más chicos */
+        height: 16px;
     }
+    
+/* Hero*/
+    .Hero {
+        font-size: 24px; /*mas chiquito*/
+        padding-left: 20px;
+        text-align: center;
+        background-image: url('../img/sabrina_header_celular.jpg'); /*cambie imagen*/
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+/* texto de biografía */
+    .biografia p {
+        font-size: 14px; /* tamaño más chiquito */
+        line-height: 1.5; /*interlineado más chiquito */
+        padding-right: 10px;
+        text-align: left;
+    }
+    .biografia {
+        display: flex; /* flexbox*/
+        flex-direction: column; /* de forma vertical */
+        align-items: center; /* elemntos centrdos */
+        padding: 10px;
+}
+/* imagen biografía*/
+    .biografia img {
+        width: 100%;
+        margin-top: 20px; /* espacio encima de la imagen */
+}
+/* titulos más chiquitos*/ 
+    h2 {
+        font-size: 24px;
+        padding: 10px 20px;
+    }
+    h3 {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+/* contenedor de canciones */
+    .contenedor-canciones {
+        display: flex;
+        flex-direction: column; /*apilados*/
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    /* imagenes contenedor canciones */
     .contenedor-canciones img {
         width: 100%;
+        width: 300px;
         height: auto;
-    }
+        margin-bottom: 20px;
+}
+    .contenedor-canciones h4 {
+        font-size: 14px;
+} 
+/* último lanzamiento */
+    .ultimo-lanzamiento {
+        background-image: url(../img/portada-musica\ -\ copia.jpg); /*cambio foto*/
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* centro el contenido en y */
+        align-items: center; /* centro contenido en x */
+        color: white;
+        font-family: 'Times New Roman', Times, serif;
 }
 
-@media (min-width: 600px) {
-    body {
-        font-size: 18px;
-        padding: 20px;
+/* tamaño h1 */
+    .ultimo-lanzamiento h1 {
+        font-size: 2rem;
+        text-align: center;
+        justify-content: center;
+        padding:0;
+        margin-right:50%;
+}
+
+/*tamaño h2 */
+    .ultimo-lanzamiento h2 {
+        font-size: 1.5rem;
+        text-align: center;
+        justify-content: center;
+        padding: 0;
+        margin-right:50%;
+}
+    /* Moda */
+    .moda section {
+        display: grid; /* grid */
+        grid-template-columns: 1fr; /* 1 columna por fila */
+        gap: 10px; /* espacio entre las imágenes */
+    }
+
+    .moda section img {
+        width: 100%; /* ocupan todo el ancho disponible */
+        height: auto; /* mantiene la proporción original */
+        max-height: 400px; /* altura máxima de las imágenes */
+    }
+
+    .moda section h3, .moda section p {
+        text-align: center; /* centrado */
+        width: 100%; /* texto ocupa todo el ancho */
+        grid-column: span 1; /* texto ocupa toda la fila */
+    }
+
+    .moda p {
+        margin-right: 20px;
+        margin-left: 20px;
+        padding: 0;
+        text-align: center; /* centrado */
+    }
+}
+@media screen and (max-width: 768px) {
+    /* nav */
+    nav {
+        text-align: center;
+        padding: 10px;
+    }
+
+    /* lista del nav */
+    nav ul {
+        display: flex;
+        flex-direction: column; /* en columna */
+        align-items: center; /* centrado */
+        padding: 0;
+        margin: 0;
+        font-size: 22px; /* mas chico */
+    }
+
+    /* elementos de la lista */
+    nav ul li {
+        margin: 8px 0;
+    }
+
+    /* footer */
+    footer {
+        font-size: 12px; /* tamaño mas chico */
+        padding: 8px;
+    }
+
+    footer img {
+        width: 18px; /* mas chico*/
+        height: 18px;
     }
     .Hero {
-        padding-left: 50px;
+        font-size: 20px; 
+        padding-left: 15px; 
+        text-align: center;
+        background-image: url('../img/sabrina_header_celular.jpg'); 
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 60vh; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
+    .biografia p {
+        font-size: 16px; 
+        line-height: 1.6; 
+        padding-right: 15px; 
+        text-align: justify; /* justificado */
+        margin: 0 20px; 
+    }
+    .biografia {
+        display: flex; /* flexbox*/
+        flex-direction: column; /* de forma vertical */
+        align-items: center; /* elementos centrados */
+        padding: 20px;
+    }
+
+    /* imagen biografía */
+    .biografia img {
+        width: 100%;
+        max-width: 400px; 
+        margin-top: 20px;
+    }
+
+    /* títulos */
+    h2 {
+        font-size: 22px; 
+        padding: 10px 20px;
+    }
+
+    h3 {
+        font-size: 20px; 
+        padding: 10px 20px;
+    }
+
+    /* contenedor de canciones */
     .contenedor-canciones {
-        flex-direction: row;
-        justify-content: space-between;
+        display: flex;
+        flex-direction: column; /* apilados */
+        align-items: center;
+        padding: 0 20px;
     }
+
+    /* imagenes contenedor canciones */
     .contenedor-canciones img {
-        width: 300px;
-        height: 300px;
+        width: 100%;
+        width: 350px; /* Limitar el ancho máximo de las imágenes */
+        height: auto;
+        margin-bottom: 20px;
     }
+    .seccion-tablas p{
+        padding: 0;
+        margin: 15px;
+}
+.moda section {
+    display: grid; /* grid */
+    grid-template-columns: repeat(2, 1fr); /* dos columnas por fila */
+    gap: 20px;
+    justify-items: center;
+    margin-bottom: 40px;
 }
 
-@media (min-width: 1024px) {
-    body {
-        font-size: 20px;
-        padding: 30px;
-    }
-    nav ul {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .contenedor-canciones img {
-        width: 300px;
-        height: 300px;
-    }
+.moda section img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.moda section h3, .moda section p {
+    text-align: center;
+    width: 100%;
+    grid-column: span 2; /* Asegurar que el texto ocupe todo el ancho */
+}
 }
